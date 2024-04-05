@@ -1,0 +1,71 @@
+/* listclinic.css */
+
+/* Estilos para a seção de resultados */
+.results {
+    padding: 20px;
+  }
+  body{
+    background-color: #1e1e1e;
+  }
+  .title_results {
+    color: #fff; /* Cor do texto */
+    background-color: #1abc9c; /* Cor de fundo verde */
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .section_all_results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .section_individual_result {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px);
+  }
+  
+  .p_results {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .product_result {
+    margin-bottom: 15px;
+  }
+  
+  .div_buttons_results {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modify_results,
+  .delete_results {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modify_results {
+    background-color: #1abc9c; /* Cor de fundo do botão de modificar */
+    color: #fff; /* Cor do texto */
+  }
+  
+  .delete_results {
+    background-color: #dc3545; /* Cor de fundo do botão de excluir */
+    color: #fff; /* Cor do texto */
+  }
+  
+  .modify_results:hover,
+  .delete_results:hover {
+    background-color: #16a085; /* Cor de fundo do botão ao passar o mouse */
+  }
+  

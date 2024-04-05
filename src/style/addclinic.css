@@ -1,0 +1,50 @@
+/* addclinic.css */
+
+.form_div {
+    background-color: #2c3e50; /* Cor de fundo escura */
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa a altura total da tela */
+  }
+  
+  .form {
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 400px; /* Largura máxima do formulário */
+  }
+  
+  .form h2 {
+    color: #fff; /* Cor do texto */
+    margin-bottom: 20px;
+  }
+  
+  .form_input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #34495e; /* Cor de fundo do input */
+    color: #fff; /* Cor do texto do input */
+  }
+  
+  .form_input::placeholder {
+    color: #ccc; /* Cor do placeholder */
+  }
+  
+  .form_button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1abc9c; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    cursor: pointer;
+  }
+  
+  .form_button:hover {
+    background-color: #16a085; /* Cor de fundo do botão ao passar o mouse */
+  }
+  

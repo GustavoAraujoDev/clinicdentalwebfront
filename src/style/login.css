@@ -1,0 +1,53 @@
+.login-container {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    margin: auto;
+  }
+  
+  .login-logo {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto; /* Mantém a proporção */
+    display: block; /* Para centralizar a imagem */
+    margin: 0 auto 20px; /* Adiciona margem inferior para separar o logo dos campos de entrada */
+  }
+  
+  .login-heading {
+    text-align: center;
+  }
+  
+  .login-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .register-button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-message {
+    text-align: center;
+  }
+  

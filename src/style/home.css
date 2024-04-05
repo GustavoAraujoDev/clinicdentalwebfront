@@ -1,0 +1,75 @@
+/* home.css */
+
+/* Estilos gerais */
+.home-container {
+    background-color: #1e1e1e; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto */
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ajuste a altura conforme necessário */
+  }
+
+  .overview {
+    margin-top: 20px;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .clinic-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 8px;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  /* Estilos para os botões */
+  .button-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+/* CSS */
+
+.header {
+  display: flex;
+  flex-direction: column; /* Adicionado para posicionar os elementos abaixo um do outro */
+  align-items: center;
+  justify-content: center;
+  margin-top: 72px;
+}
+
+.logo {
+  width: 185px;
+  height: auto;
+  margin-top: 10px; /* Adicionado um espaçamento entre o logo e o nome da clínica */
+}
+
+.button {
+    background-color: #333; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 12px 24px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #555; /* Cor de fundo do botão ao passar o mouse */
+  }
+  
