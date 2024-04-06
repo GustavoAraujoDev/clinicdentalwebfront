@@ -17,7 +17,7 @@ function AddDentistForm() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:6600")
+    fetch("http://localhost:6600/dentista")
       .then((res) => res.json())
       .then((data) => {
         setResult(data);
@@ -47,7 +47,7 @@ function AddDentistForm() {
       (item) => window.location.pathname === `/modify/${item.id}`
     );
     if (foundItem) {
-      fetch("http://localhost:6600", {
+      fetch("http://localhost:6600/dentista", {
         method: "PUT",
         body: JSON.stringify(dataToInsert),
         headers: { "Content-Type": "application/json" },
@@ -57,13 +57,13 @@ function AddDentistForm() {
         })
         .catch((error) => console.error("Error:", error));
     } else {
-      fetch("http://localhost:6600", {
+      fetch("http://localhost:6600/dentista", {
         method: "POST",
         body: JSON.stringify(dataToInsert),
         headers: { "Content-Type": "application/json" },
       })
         .then(() => {
-          toast.success('Clinica Cadastrada Com Sucesso');
+          toast.success('Dentista Cadastrada Com Sucesso');
           clearForm(); // Limpar os campos após o envio
         })
         .catch((error) => console.error("Error:", error));

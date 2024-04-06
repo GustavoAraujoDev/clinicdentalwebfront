@@ -12,7 +12,7 @@ const Home = () => {
     // Função para buscar o número de dentistas cadastrados
     const fetchDentistCount = async () => {
       try {
-          const response = await fetch("http://localhost:6600/totaldentista");
+          const response = await fetch("http://localhost:6600/dentista");
           if (!response.ok) {
               throw new Error("Erro ao buscar número de dentistas: " + response.statusText);
           }
@@ -28,7 +28,7 @@ const Home = () => {
     // Função para buscar o número de clínicas cadastradas
     const fetchClinicCount = async () => {
       try {
-        const response = await fetch("http://localhost:7700/totalclinica");
+        const response = await fetch("http://localhost:6600/clinica");
         if (!response.ok) {
             throw new Error("Erro ao buscar número de dentistas: " + response.statusText);
         }
@@ -44,7 +44,7 @@ const Home = () => {
     // Função para buscar o valor total das despesas
     const fetchTotalExpenses = async () => {
       try {
-        const response = await fetch("http://localhost:8800/totaldespesa");
+        const response = await fetch("http://localhost:6600/despesa");
         if (!response.ok) {
           throw new Error("Erro ao buscar o total das despesas: " + response.statusText);
         }
@@ -61,7 +61,7 @@ const Home = () => {
     // Função para buscar o valor total das despesas
     const fetchTotalEmployees = async () => {
       try {
-        const response = await fetch("http://localhost:5500/totalfuncionario");
+        const response = await fetch("http://localhost:6600/funcionario");
         if (!response.ok) {
             throw new Error("Erro ao buscar número de dentistas: " + response.statusText);
         }
@@ -112,7 +112,7 @@ const Home = () => {
           <Link to="/funcionaris" className='button'>Lista de Funcionario</Link>
           <Link to="/add-despese" className='button'> Adicionar Despesa</Link>
           <Link to="/despeses" className='button'>Lista de Despesa</Link>
-        </div>
+          </div>
       </div>
     </div>
   );

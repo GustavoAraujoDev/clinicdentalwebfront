@@ -16,7 +16,7 @@ function AddDespesaForm() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:8800")
+    fetch("http://localhost:6600/despesa")
       .then((res) => res.json())
       .then((data) => {
         setResult(data);
@@ -47,7 +47,7 @@ function AddDespesaForm() {
       (item) => window.location.pathname === `/modify/${item.id}`
     );
     if (foundItem) {
-      fetch("http://localhost:8800", {
+      fetch("http://localhost:6600/despesa", {
         method: "PUT",
         body: JSON.stringify(dataToInsert),
         headers: { "Content-Type": "application/json" },
@@ -58,13 +58,13 @@ function AddDespesaForm() {
         })
         .catch((error) => console.error("Error:", error));
     } else {
-      fetch("http://localhost:8800", {
+      fetch("http://localhost:6600/despesa", {
         method: "POST",
         body: JSON.stringify(dataToInsert),
         headers: { "Content-Type": "application/json" },
       })
         .then(() => {
-          toast.success('Clinica Cadastrada Com Sucesso');
+          toast.success('Despesa Cadastrada Com Sucesso');
           clearForm(); // Limpar os campos após o envio
         })
         .catch((error) => console.error("Error:", error));

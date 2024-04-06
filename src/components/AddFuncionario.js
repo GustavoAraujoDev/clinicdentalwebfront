@@ -16,7 +16,7 @@ function AddFuncionarioForm() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5500")
+    fetch("http://localhost:6600/funcionario")
       .then((res) => res.json())
       .then((data) => {
         setResult(data);
@@ -46,7 +46,7 @@ function AddFuncionarioForm() {
       (item) => window.location.pathname === `/modify/${item.id}`
     );
     if (foundItem) {
-      fetch("http://localhost:5500", {
+      fetch("http://localhost:6600/funcionario", {
         method: "PUT",
         body: JSON.stringify(dataToInsert),
         headers: { "Content-Type": "application/json" },
@@ -56,7 +56,7 @@ function AddFuncionarioForm() {
         })
         .catch((error) => console.error("Error:", error));
     } else {
-      fetch("http://localhost:5500", {
+      fetch("http://localhost:6600/funcionario", {
         method: "POST",
         body: JSON.stringify(dataToInsert),
         headers: { "Content-Type": "application/json" },

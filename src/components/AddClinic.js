@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import '../style/addclinic.css'
+import '../style/adddentist.css'
 import {toast} from "react-toastify";
 
 function AddClinicForm() {
@@ -10,13 +10,13 @@ function AddClinicForm() {
     Email: "",
     Endereco: "",
     CNPJ: "",
-    CRO: "", // Adicionando o campo CRO
   });
   const [redirected, setRedirected] = useState(false);
+
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:7700")
+    fetch("http://localhost:6600/clinica")
       .then((res) => res.json())
       .then((data) => {
         setResult(data);
@@ -46,24 +46,23 @@ function AddClinicForm() {
       (item) => window.location.pathname === `/modify/${item.id}`
     );
     if (foundItem) {
-      fetch("http://localhost:7700", {
+      fetch("http://localhost:6600/clinica", {
         method: "PUT",
         body: JSON.stringify(dataToInsert),
         headers: { "Content-Type": "application/json" },
       })
         .then(() => {
-          toast.success('Clinica Atualizada Com Sucesso');
           clearForm(); // Limpar os campos após o envio
         })
         .catch((error) => console.error("Error:", error));
     } else {
-      fetch("http://localhost:7700", {
+      fetch("http://localhost:6600/clinica", {
         method: "POST",
         body: JSON.stringify(dataToInsert),
         headers: { "Content-Type": "application/json" },
       })
         .then(() => {
-          toast.success('Clinica Cadastrada Com Sucesso');
+          toast.success('clinica Cadastrada Com Sucesso');
           clearForm(); // Limpar os campos após o envio
         })
         .catch((error) => console.error("Error:", error));
@@ -84,7 +83,6 @@ function AddClinicForm() {
       Email: "",
       Endereco: "",
       CNPJ: "",
-      CRO: "",
     });
   };
 

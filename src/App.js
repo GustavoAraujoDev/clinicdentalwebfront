@@ -35,7 +35,7 @@ function App() {
           <Route path="/add-despese" element={<AddDespesaForm />} />
           <Route path="/despeses" element={<ListDespesa />} />
           <Route path="/add-despese/:id" element={<AddFuncionarioForm />} />
-        </Routes>
+    </Routes>
       </div>
     </Router>
   );

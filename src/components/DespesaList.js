@@ -9,7 +9,7 @@ function ListDespesa() {
 
   // Faz a solicitação das informações no backend quando a página é carrgada.
   useEffect(() => {
-    fetch("http://localhost:8800")
+    fetch("http://localhost:6600/despesa")
       .then((res) => res.json())
       .then((data) => {
         setResult(data);
@@ -29,7 +29,7 @@ function ListDespesa() {
     if (confirm("Tem certeza que deseja excluir estas informações?")) {
       // Se confirmar a pergunta anterior, envia as informações para o backend.
       console.log("Informação excluída");
-      fetch("http://localhost:8800", {
+      fetch("http://localhost:6600/despesa", {
         method: "DELETE",
         body: JSON.stringify({
          ExpenseID : e.target.name,

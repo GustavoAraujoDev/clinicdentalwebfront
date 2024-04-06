@@ -7,7 +7,7 @@ function ListDentist() {
 
   // Faz a solicitação das informações no backend quando a página é carrgada.
   useEffect(() => {
-    fetch("http://localhost:6600")
+    fetch("http://localhost:6600/dentista")
       .then((res) => res.json())
       .then((data) => {
         setResult(data);
@@ -27,7 +27,7 @@ function ListDentist() {
     if (confirm("Tem certeza que deseja excluir estas informações?")) {
       // Se confirmar a pergunta anterior, envia as informações para o backend.
       console.log("Informação excluída");
-      fetch("http://localhost:6600", {
+      fetch("http://localhost:6600/dentista", {
         method: "DELETE",
         body: JSON.stringify({
           DentistID: e.target.name,
